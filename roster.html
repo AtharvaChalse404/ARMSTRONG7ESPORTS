@@ -5,8 +5,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roster Information - Armstrong 7 Esports</title>
     <link rel="stylesheet" href="Styles/main.css">
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #0a0a0a;
+            color: #fff;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #1a1a1a;
+            padding: 1rem;
+        }
+
+        .navbar .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #f39c12;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav-links li a:hover {
+            color: #f39c12;
+        }
+
+        /* Roster Section */
+        .roster {
+            padding: 2rem;
+        }
+
+        .roster-grid {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .player-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, backdrop-filter 0.3s;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            width: 200px; /* Set a fixed width for the card */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .player-card:hover {
+            transform: scale(1.05);
+            backdrop-filter: blur(0);
+        }
+
+        .player-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #0a0a0a;
+            color: #ccc;
+            margin-top: 2rem;
+        }
+    </style>
 </head>
 <body>
+     <!-- Loader HTML -->
+     <div class="loader">
+        <div class="newtons-cradle">
+            <div class="newtons-cradle__dot"></div>
+            <div class="newtons-cradle__dot"></div>
+            <div class="newtons-cradle__dot"></div>
+            <div class="newtons-cradle__dot"></div>
+            <div class="newtons-cradle__dot"></div>
+        </div>
+    </div>
     <header>
         <nav class="navbar">
             <div class="logo">Armstrong 7 Esports</div>
@@ -39,7 +136,7 @@
                     <p>Role: Assaulter</p>
                 </div>
                 <div class="player-card">
-                    <img src="Images/AS7xABHI.jpg" alt="AS7xZORO" class="player-image">
+                    <img src="Images/AS7xABHI.jpg" alt="AS7 xZORO" class="player-image">
                     <h2>AS7xABHI</h2>
                     <p>Role: Assaulter</p>
                 </div>
