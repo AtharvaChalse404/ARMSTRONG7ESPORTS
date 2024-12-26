@@ -197,3 +197,41 @@ footer {
     color: #ccc;
     margin-top: 2rem;
 }
+
+
+/* Roster Section */
+.roster {
+    padding: 2rem;
+}
+
+.roster-grid {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.player-card {
+    background-color: #1a1a1a;
+    padding: 1rem;
+    border-radius: 5px;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.player-card:hover {
+    transform: scale(1.05);
+}
+
+.player-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.player-card h2 {
+    color: #f39c12;
+}
