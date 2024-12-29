@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roster Information - Armstrong 7 Esports</title>
     <link rel="stylesheet" href="Styles/main.css">
-    <link rel="icon" href="Images/AS7 ESPORTS LOGO.jpg" type="image/png">
+    <link rel="icon" href="Images/AS7 ESPORTS LOGO.jpg" type="image/png"> <!-- Favicon link -->
+
     <style>
+        /* General Styles */
         body {
             margin: 0;
             font-family: 'Montserrat', sans-serif;
@@ -14,37 +16,41 @@
             color: #fff;
         }
 
-        .owner-section {
-            text-align: center;
-            padding: 3rem 1rem;
+ 
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             background-color: #1a1a1a;
+            padding: 1rem;
         }
 
-        .owner-card {
-            max-width: 600px;
-            margin: 0 auto;
-            border: 2px solid #f39c12;
-            border-radius: 10px;
-            padding: 2rem;
-            background-color: #0a0a0a;
-        }
-
-        .owner-card img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-
-        .owner-card h2 {
-            margin: 1rem 0;
-            font-size: 2rem;
+        .navbar .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
             color: #f39c12;
         }
 
-        .owner-card p {
-            font-size: 1.2rem;
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
         }
 
+        .nav-links li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav-links li a:hover {
+            color: #f39c12;
+        }
+
+        /* Roster Section */
         .roster {
             padding: 2rem;
         }
@@ -61,17 +67,47 @@
             border-radius: 10px;
             padding: 20px;
             text-align: center;
-            width: 200px;
+            transition: transform 0.3s, backdrop-filter 0.3s;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            width: 200px; /* Set a fixed width for the card */
+            position: relative;
+            overflow: hidden;
         }
 
-        .player-card img {
+        .player-card:hover {
+            transform: scale(1.05);
+            backdrop-filter: blur(0);
+        }
+
+        .player-image {
             width: 100%;
             height: auto;
             border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #0a0a0a;
+            color: #ccc;
+            margin-top: 2rem;
         }
     </style>
 </head>
-<body>
+<body style="background-image: url('Images/BGMI BACKGROUND.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <!-- Loader HTML -->    <!-- Loader HTML -->
+    <div class="loader">
+        <div class="newtons-cradle">
+            <div class="newtons-cradle__dot"></div>
+            <div class="newtons-cradle__dot"></div>
+            <div class="newtons-cradle__dot"></div>
+            <div class="newtons-cradle__dot"></div>
+            <div class="newtons-cradle__dot"></div>
+        </div>
+    </div>
     <header>
         <nav class="navbar">
             <div class="logo">Armstrong 7 Esports</div>
@@ -85,56 +121,58 @@
         </nav>
     </header>
     <main>
-        <!-- Owner Section -->
-        <section class="owner-section">
-            <h1>Team Owner</h1>
-            <div class="owner-card">
-                <img src="Images/AS7xDEVMANUS.jpg" alt="AS7xDevManus">
-                <h2>AS7xDevManus</h2>
-                <p>Owner and Captain of the AS7 Lineup. A strategic mind with unmatched leadership skills in BGMI esports.</p>
-            </div>
-        </section>
-
-        <!-- Lineup Section -->
-        <section class="roster">
+        <section class="roster" style="color: #0a0a0a; font-style: italic;">
             <h1>Roster Information</h1>
             <div class="roster-grid">
-                <!-- Player Cards -->
+
                 <div class="player-card">
-                    <img src="Images/AS7xSARANG.png" alt="AS7xSarangJod">
-                    <h2>AS7xSarangJod</h2>
-                    <p>Role: In-Game Leader</p>
-                </div>
-                <div class="player-card">
-                    <img src="Images/AS7xSpray.jpg" alt="AS7xSpray">
-                    <h2>AS7xSpray</h2>
-                    <p>Role: Assaulter</p>
-                </div>
-                <div class="player-card">
-                    <img src="Images/AS7xABHI.jpg" alt="AS7xABHI">
-                    <h2>AS7xABHI</h2>
-                    <p>Role: Assaulter</p>
-                </div>
-                <div class="player-card">
-                    <img src="Images/AS7xDEVMANUS.jpg" alt="AS7xDevManus">
+                    <img src="Images/AS7xDEVMANUS.jpg" alt="AS7xDevManus" class="player-image">
                     <h2>AS7xDevManus</h2>
                     <p>Role: Filter / Assaulter</p>
+                    <p>Age : 22</p>
+                </div>
+
+                <div class="player-card">
+                    <img src="Images/AS7xSARANG.png" alt="AS7xSarangJod" class="player-image">
+                    <h2>AS7xSarangJod</h2>
+                    <p>Role: In-Game Leader</p>
+                    <p>Age : 17</p>
                 </div>
                 <div class="player-card">
-                    <img src="Images/AS7xSAIMOG.jpg" alt="AS7xSaimOG">
+                    <img src="Images/AS7xSpray.jpg" alt="AS7xSpray" class="player-image">
+                    <h2>AS7xSpray</h2>
+                    <p>Role: Assaulter</p>
+                    <p>Age : 21</p>
+
+                </div>
+                <div class="player-card">
+                    <img src="Images/AS7xABHI.jpg" alt="AS7 xZORO" class="player-image">
+                    <h2>AS7xABHI</h2>
+                    <p>Role: Assaulter</p>
+                    <p>Age : 22</p>
+                </div>
+
+                <div class="player-card">
+                    <img src="Images/AS7xSAIMOG.jpg" alt="AS7xSaimOG" class="player-image">
                     <h2>AS7xSaimOG</h2>
                     <p>Role: Assaulter</p>
+                    <p>Age : 17</p>
+
                 </div>
                 <div class="player-card">
-                    <img src="Images/AS7xSora.jpg" alt="AS7xSoraIsLive">
+                    <img src="Images/AS7xSora.jpg" alt="AS7xSoraIsLive" class="player-image">
                     <h2>AS7xSoraIsLive</h2>
                     <p>Role: Entry Fragger</p>
+                    <p>Age : 15</p>
+
                 </div>
+               
+               
             </div>
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Armstrong 7 Esports. All rights reserved.</p>
+        <p>&copy; 2024 Armstrong 7 Esports. All rights reserved. </p>
     </footer>
 </body>
 </html>
