@@ -8,19 +8,30 @@ body {
 
 
 
-/* Navbar */
+/* Enhanced Navbar Styles */
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #1a1a1a;
     padding: 1rem;
+    background: linear-gradient(90deg, #f39c12, #8e44ad);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .navbar .logo {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: bold;
-    color: #f39c12;
+    color: #fff;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.navbar .logo:hover {
+    transform: scale(1.1);
+    color: #ffdd59;
 }
 
 .nav-links {
@@ -32,13 +43,49 @@ body {
 .nav-links li a {
     text-decoration: none;
     color: #fff;
-    font-weight: bold;
-    transition: color 0.3s;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 .nav-links li a:hover {
-    color: #f39c12;
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffdd59;
 }
+
+.nav-links li a.active {
+    background: rgba(255, 255, 255, 0.3);
+    color: #f1c40f;
+    font-weight: bold;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        display: none;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .navbar .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: #fff;
+    }
+}
+
 
 /* Sections */
 h1 {
@@ -143,52 +190,6 @@ h1 {
 
 .player:hover {
     transform: scale(1.05);
-}
-
-/* Contact Section */
-.contact {
-    padding: 2rem;
-    text-align: center;
-}
-
-form {
-    max-width: 400px;
-    margin: auto;
-    background-color: #1a1a1a;
-    padding: 1rem;
-    border-radius: 5px;
-}
-
-form label {
-    display: block;
-    margin: 1rem 0 0.5rem;
-    font-weight: bold;
-    color: #f39c12;
-}
-
-form input, form textarea, form button {
-    width: 100%;
-    padding: 0.8rem;
-    margin-bottom: 1rem;
-    border: none;
-    border-radius: 5px;
-}
-
-form input, form textarea {
-    background-color: #333;
-    color: #fff;
-}
-
-form button {
-    background-color: #f39c12;
-    color: #000;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-form button:hover {
-    background-color: #d35400;
 }
 
 /* Footer */
