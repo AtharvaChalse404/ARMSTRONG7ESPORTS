@@ -13,94 +13,33 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #111;
-    padding: 1rem 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    background-color: #1a1a1a;
+    padding: 1rem;
 }
 
-.navbar .logo a {
-    font-size: 1.8rem;
+.navbar .logo {
+    font-size: 1.5rem;
     font-weight: bold;
     color: #f39c12;
-    text-decoration: none;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 2rem;
-    transition: transform 0.3s ease-in-out;
+    gap: 1.5rem;
 }
 
 .nav-links li a {
     text-decoration: none;
     color: #fff;
-    font-weight: 600;
-    position: relative;
-}
-
-.nav-links li a::after {
-    content: "";
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #f39c12;
-    transition: width 0.3s ease-in-out;
-}
-
-.nav-links li a:hover::after {
-    width: 100%;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
 .nav-links li a:hover {
     color: #f39c12;
 }
 
-/* Mobile Menu Toggle */
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-}
-
-.menu-toggle .bar {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: flex;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        background-color: #111;
-        width: 100%;
-        padding: 1rem 2rem;
-        display: none;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-}
-
-/* Smooth Transition for Mobile */
-.nav-links li {
-    margin: 0.5rem 0;
-}
 /* Sections */
 h1 {
     text-align: center;
@@ -377,6 +316,16 @@ footer {
     display: none; /* Initially hidden */
 }
 
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack navbar items vertically */
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack links vertically */
+        align-items: center; /* Center align links */
+    }
 
     .roster-grid {
         flex-direction: column; /* Stack player cards vertically */
@@ -390,7 +339,7 @@ footer {
     h1 {
         font-size: 2rem; /* Reduce font size for headings */
     }
-
+}
 
 @media (max-width: 480px) {
     .navbar .logo {
