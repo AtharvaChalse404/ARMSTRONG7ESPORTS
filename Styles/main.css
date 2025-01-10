@@ -390,7 +390,7 @@ footer {
     h1 {
         font-size: 2rem; /* Reduce font size for headings */
     }
-}
+
 
 @media (max-width: 480px) {
     .navbar .logo {
